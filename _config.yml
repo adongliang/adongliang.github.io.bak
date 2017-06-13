@@ -1,1 +1,17 @@
-theme: jekyll-theme-cayman
+auto: true
+
+kramdown: rdiscount
+
+#highlighter: 'pygments'
+kramdown:
+  input: GFM
+  systax_highlight: rouge
+#paginate: 8
+permalink: /:title
+
+name: “DongLiang's Blog”
+title: “dongliang's blog
+description: Everything about dongliang.
+url: http://adongliang.github.io
+feed: /atom.xml
+author_info: <a href="http://adongliang.github.io/">dongliang</a>
