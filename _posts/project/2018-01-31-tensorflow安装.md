@@ -6,8 +6,9 @@ description: 安装tensorflow-gpu教程
 ---
 #安装tensorflow-gpu教程
 
-* 控制面板->NVIDIA控制面板->帮助->系统信息->组件->3D设置里的NVCUDA.DLL的版本  
-  如果不符合tensorflow的需要版本的最低要求，请重新下载安装
+* 查看路径    
+  控制面板->NVIDIA控制面板->帮助->系统信息->组件->3D设置里的NVCUDA.DLL的版本    
+  如果不符合tensorflow的的最低要求，请重新下载安装CUDA
 * [CUDA（选择合适的版本）](https://developer.nvidia.com/cuda-toolkit-archive)
 * [cuDNN（下载需要注册）](https://developer.nvidia.com/rdp/cudnn-download)  
   我选择的版本是  
