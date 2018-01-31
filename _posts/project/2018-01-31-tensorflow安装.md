@@ -8,9 +8,7 @@ description: 安装tensorflow-gpu教程
 
 * 控制面板->NVIDIA控制面板->帮助->系统信息->组件->3D设置里的NVCUDA.DLL的版本  
   如果不符合tensorflow的需要版本的最低要求，请重新下载安装
-
 * [CUDA（选择合适的版本）](https://developer.nvidia.com/cuda-toolkit-archive)
-
 * [cuDNN（下载需要注册）](https://developer.nvidia.com/rdp/cudnn-download)  
   我选择的版本是  
   CUDA9.0 & cuDNN7 & tensorflow1.5  
@@ -24,7 +22,6 @@ description: 安装tensorflow-gpu教程
    `conda install pip `   
 * 根据官方的例子测试即可  
    
-
    输入：
 ```python
     import tensorflow as tf  
@@ -37,7 +34,6 @@ description: 安装tensorflow-gpu教程
 	# Runs the op.
 	print(sess.run(c))
 ```
-
   输出：
 ```python
 	MatMul: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
