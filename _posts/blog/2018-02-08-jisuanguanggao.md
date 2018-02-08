@@ -1,3 +1,10 @@
+---
+layout:     post
+title:      计算广告笔记
+category: blog
+description: 刘鹏《计算广告》
+---
+
 ## 互联网广告概述
 ### 广告的作用
 1.什么是广告 
