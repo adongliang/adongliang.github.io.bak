@@ -8,7 +8,7 @@ description: mongodb安装&极简入门
 ## MongoDB安装（Windows平台）
 
 ### 1、MongoDB官网下载
-https://www.mongodb.com/
+[mongodb官网](https://www.mongodb.com/)
 
 ### 2、安装路径问题
 MongoDB 的安装路径最好不要太深，因为后面需要经常切换到MongoDB 的 bin 目录执行命令。
@@ -16,7 +16,7 @@ MongoDB 的安装路径最好不要太深，因为后面需要经常切换到Mon
 ### 3、MongoDB的安装、配置
 我这边把mongodb安装到 F:\mongodb 目录
 
-cmd切换到F盘，进入mongodb的bin目录： `cd F:\mongodb\bin` 
+cmd切换到F盘，进入mongodb的bin目录： `cd F:\mongodb\bin`
 `mongod --logpath "F:\mongodb\data\log\mongodb.log"`
 指定数据存放的目录： `mongod --dbpath "F:\mongodb\data\db"`
 
