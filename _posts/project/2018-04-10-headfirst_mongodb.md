@@ -31,7 +31,7 @@ t 27017
  capture shutdown detected, found interim file, some metrics may have been lost.
  OK
 ```
-### 4、接着重新打开一个cmd窗口，进入到mongo的bin目录，输入：mongo
+接着重新打开一个cmd窗口，进入到mongo的bin目录，输入：mongo
 ```
 F:\mongodb\bin>mongo
 MongoDB shell version v3.4.14
@@ -50,13 +50,13 @@ r update is not installed, will zero-out data files.
 ```
 出现上面的内容，说明已经成功连接数据库。
 
-### 5、常见问题（代补充）
+### 4、常见问题（代补充）
 如果出现端口占有等情况，在任务管理器中关闭mongo.exe，在bin目录下重新运行：
    `mongod --dbpath "F:\mongodb\data\db"`
    接着，重新打开一个cmd，在bin目录下输入：`mongo`
    就会出现一个shell，大功告成。
 
-#mongodb极简入门
+# mongodb极简入门
 - 创建数据库
 `use myshujuku`
 
