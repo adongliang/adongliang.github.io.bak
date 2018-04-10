@@ -5,7 +5,7 @@ category: project
 description: mongodb安装&极简入门
 ---
 
-# MongoDB安装（Windows平台）
+## MongoDB安装（Windows平台）
 
 ### 1、MongoDB官网下载
 https://www.mongodb.com/
@@ -56,7 +56,7 @@ r update is not installed, will zero-out data files.
    接着，重新打开一个cmd，在bin目录下输入：`mongo`
    就会出现一个shell，大功告成。
 
-# mongodb极简入门
+## mongodb极简入门
 - 创建数据库
 `use myshujuku`
 
