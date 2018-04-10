@@ -16,9 +16,9 @@ MongoDB 的安装路径最好不要太深，因为后面需要经常切换到Mon
 ### 3、MongoDB的安装、配置
 我这边把mongodb安装到 F:\mongodb 目录
 
-cmd切换到F盘，进入mongodb的bin目录： `cd F:\mongodb\bin`
-`mongod --logpath "F:\mongodb\data\log\mongodb.log"`
-指定数据存放的目录： `mongod --dbpath "F:\mongodb\data\db"`
+cmd切换到F盘，进入mongodb的bin目录： `cd F:\mongodb\bin`  
+`mongod --logpath "F:\mongodb\data\log\mongodb.log"`  
+指定数据存放的目录： `mongod --dbpath "F:\mongodb\data\db"`  
 
 执行完上述命令，命令行最后会出现类型下面这样的描述，就表示配置成功：
 ```
@@ -51,9 +51,9 @@ r update is not installed, will zero-out data files.
 出现上面的内容，说明已经成功连接数据库。
 
 ### 4、常见问题（代补充）
-如果出现端口占有等情况，在任务管理器中关闭mongo.exe，在bin目录下重新运行：
-   `mongod --dbpath "F:\mongodb\data\db"`
-   接着，重新打开一个cmd，在bin目录下输入：`mongo`
+如果出现端口占有等情况，在任务管理器中关闭mongo.exe，在bin目录下重新运行：  
+   `mongod --dbpath "F:\mongodb\data\db"`  
+   接着，重新打开一个cmd，在bin目录下输入：`mongo`  
    就会出现一个shell，大功告成。
 
 ## mongodb极简入门
@@ -114,15 +114,15 @@ db.movie.insert(
 2. 如果一个key有多个value，value要用[]。哪怕当前只有一个value，也加上[]以备后续的添加；
 3. 整个“数据块”要用{}括起来；
 
-- 查询全部数据
-`db.movie.find().pretty()`
+- 查询全部数据  
+`db.movie.find().pretty()`    
 pretty()的作用是规范我们输出的格式，易于阅读。
 仔细观察find()的结果，你会发现多了一个叫'_id'的东西，这是数据库自动创建的一个ID号，在同一个数据库里，每个文档的ID号都是不同的。
-批量插入的格式是这样的：db.movie.insert([{ITEM1},{ITEM2}])。几部电影的外面需要用[]括起来。
+批量插入的格式是这样的：`db.movie.insert([{ITEM1},{ITEM2}])`。几部电影的外面需要用[]括起来。
 
 - 条件查询数据
-`db.movie.find({'directed_by':'David Fincher'}).pretty()`
-`db.movie.find({'directed_by':'David Fincher', 'stars':'Morgan Freeman'}).pretty()`
+`db.movie.find({'directed_by':'David Fincher'}).pretty()`  
+`db.movie.find({'directed_by':'David Fincher', 'stars':'Morgan Freeman'}).pretty()`  
 ```
 db.movie.find(
 {
@@ -132,17 +132,17 @@ db.movie.find(
      ]
 }).pretty()
 ```
-`db.movie.find({likes:{$lt:200000}}).pretty()`
+`db.movie.find({likes:{$lt:200000}}).pretty()`  
 类似的运算符还有：`$lte`:小于或等于；`$gte`:大于或等于；`$ne`:不等于。
 
 - 如果结果很多而你只想显示其中一部分，可以用limit()和skip()
   前者指明输出的个数，后者指明从第二个结果开始数。比如：
-`db.movie.find().limit(2).skip(1).pretty()`
-`db.movie.find({'tags':'drama'},{'debut':1,'title':1}).pretty()`
+`db.movie.find().limit(2).skip(1).pretty()`  
+`db.movie.find({'tags':'drama'},{'debut':1,'title':1}).pretty()`  
 
 对于符合条件的条目，我们都是返回整个JSON文件的。这类似于SQL里面的SELECT *。有的时候，我们需要的，仅仅是部分数据，这个时候，find的局部查询的功能就派上用场了。先来看一个例子，返回tags为drama的电影的名字和首映日期。
-这里find的第二个参数是用来控制输出的，1表示要返回，而0则表示不返回。默认值是0，但_id是例外，因此如果你不想输出_id，需要显式地声明：
-`db.movie.find({'tags':'drama'},{'debut':1,'title':1,'_id':0}).pretty()`
+这里find的第二个参数是用来控制输出的，1表示要返回，而0则表示不返回。默认值是0，但_id是例外，因此如果你不想输出_id，需要显式地声明：  
+`db.movie.find({'tags':'drama'},{'debut':1,'title':1,'_id':0}).pretty()`  
 
 - 更新数据
 `db.movie.update({title:'Seven'}, {$set:{likes:134371}})`
