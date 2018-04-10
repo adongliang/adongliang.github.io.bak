@@ -5,15 +5,15 @@ category: project
 description: mongodb安装&极简入门
 ---
 
-#MongoDB安装（Windows平台）
+# MongoDB安装（Windows平台）
 
-###1、MongoDB官网下载
+### 1、MongoDB官网下载
 https://www.mongodb.com/
 
-###2、安装路径问题
+### 2、安装路径问题
 MongoDB 的安装路径最好不要太深，因为后面需要经常切换到MongoDB 的 bin 目录执行命令。
 
-###3、MongoDB的安装、配置
+### 3、MongoDB的安装、配置
 我这边把mongodb安装到 F:\mongodb 目录
 
 cmd切换到F盘，进入mongodb的bin目录： `cd F:\mongodb\bin` 
@@ -31,7 +31,7 @@ t 27017
  capture shutdown detected, found interim file, some metrics may have been lost.
  OK
 ```
-###4、接着重新打开一个cmd窗口，进入到mongo的bin目录，输入：mongo
+### 4、接着重新打开一个cmd窗口，进入到mongo的bin目录，输入：mongo
 ```
 F:\mongodb\bin>mongo
 MongoDB shell version v3.4.14
@@ -50,7 +50,7 @@ r update is not installed, will zero-out data files.
 ```
 出现上面的内容，说明已经成功连接数据库。
 
-###5、常见问题（代补充）
+### 5、常见问题（代补充）
 如果出现端口占有等情况，在任务管理器中关闭mongo.exe，在bin目录下重新运行：
    `mongod --dbpath "F:\mongodb\data\db"`
    接着，重新打开一个cmd，在bin目录下输入：`mongo`
