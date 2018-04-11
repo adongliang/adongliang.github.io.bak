@@ -10,7 +10,7 @@ kramdown:
 permalink: /:title
 
 name: “DongLiang's Blog”
-title: “dongliang's blog
+title: dongliang's blog
 description: Everything about dongliang.
 url: http://adongliang.github.io
 feed: /atom.xml
